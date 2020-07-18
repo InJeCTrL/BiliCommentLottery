@@ -317,12 +317,7 @@ namespace BiliCommentLottery
                     {
                         ECList = ECList.Where(c => c.Message == txt_specomment.Text);
                     }
-                    // 检查是否去重
-                    if (chk_distinct.IsChecked.Value)
-                    {
-                        ECList = ECList.Distinct();
-                    }
-                    // 检查时间界限
+                    // 检查开始时间界限
                     DateTime start = DateTime.MinValue;
                     if (!chk_unlimitstart.IsChecked.Value)
                     {
@@ -376,6 +371,11 @@ namespace BiliCommentLottery
                             MessageBox.Show("请选择结束时间日期！");
                             return;
                         }
+                    }
+                    // 检查是否去重
+                    if (chk_distinct.IsChecked.Value)
+                    {
+                        ECList = ECList.Distinct();
                     }
                     // 检查初步筛选后个数
                     int n_filted = ECList.Count();
