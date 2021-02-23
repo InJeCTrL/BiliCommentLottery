@@ -388,11 +388,11 @@ namespace BiliCommentLottery
                         ObservableCollection<Comment> tComments = new ObservableCollection<Comment>(ECList);
                         ObservableCollection<Comment> result = new ObservableCollection<Comment>();
                         Random random = new Random();
-                        for (int i = n_filted - 1; i >= n_filted - n_roll; --i)
+                        for (int i = n_filted; i > n_filted - n_roll; --i)
                         {
                             int pRandom = random.Next(0, i);
                             result.Add(tComments.ElementAt(pRandom));
-                            tComments[pRandom] = tComments[i];
+                            tComments[pRandom] = tComments[i - 1];
                         }
                         CommentGrid.DataContext = result;
                         showRolled = true;
