@@ -13,10 +13,6 @@
 - [x] 可复制评论网址方便访问
 - [ ] 楼中楼评论（可能导致对Bilibili服务器大量访问，舍弃）
 
-## 获取
-
-[X86 & X64](https://github.com/InJeCTrL/BiliCommentLottery/releases/download/1.0/BiliCommentLottery.rar)
-
 ## 界面展示
 
 1. 开始界面
