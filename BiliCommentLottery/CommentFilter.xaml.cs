@@ -121,7 +121,7 @@ namespace BiliCommentLottery
                 default:
                     WorkType = 17;
                     CommentURL = "https://t.bilibili.com/" + ID + "#reply";
-                    info_url = "https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/get_dynamic_detail?dynamic_id=" + ID;
+                    info_url = "http://api.bilibili.com/x/polymer/web-dynamic/v1/detail?id=" + ID;
                     break;
             }
             HttpWebRequest webRequest = (HttpWebRequest)WebRequest.Create(info_url);
@@ -147,21 +147,21 @@ namespace BiliCommentLottery
                                 // 动态需要判断是否存在rid
                                 if (WorkType == 17)
                                 {
-                                    if (data.ContainsKey("card"))
+                                    if (data.ContainsKey("item"))
                                     {
-                                        var card = JsonSerializer.Deserialize<Dictionary<string, object>>(data["card"].ToString());
-                                        var desc = JsonSerializer.Deserialize<Dictionary<string, object>>(card["desc"].ToString());
+                                        var item = JsonSerializer.Deserialize<Dictionary<string, object>>(data["item"].ToString());
+                                        var basic = JsonSerializer.Deserialize<Dictionary<string, object>>(item["basic"].ToString());
                                         // get_dynamic_detail中type为4: WorkType=17, OID=动态ID
-                                        if (desc["type"].ToString() == "4")
+                                        if (basic["comment_type"].ToString() == "17")
                                         {
                                             WorkType = 17;
                                             OID = ID;
                                         }
                                         // get_dynamic_detail中type为2: WorkType=11, OID=rid
-                                        else if (desc["type"].ToString() == "2")
+                                        else if (basic["comment_type"].ToString() == "11")
                                         {
                                             WorkType = 11;
-                                            OID = desc["rid"].ToString();
+                                            OID = basic["rid_str"].ToString();
                                         }
                                         valid = true;
                                     }
