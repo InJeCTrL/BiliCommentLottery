@@ -2,6 +2,8 @@
 
 > Bilibili评论区抽奖工具
 
+***BiliCommentLottery已迁移至[BiliCLOnline项目](https://github.com/InJeCTrL/BiliCLOnline)，欢迎使用更新的BiliCLOnline，本项目将停止更新！***
+
 ## 功能
 
 - [x] 支持视频稿件AV号/BV号
