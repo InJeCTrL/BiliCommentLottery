@@ -29,10 +29,10 @@
 
 ## 运行需要
 
-[Desktop Runtime 3.1(including DotNet Core Runtime 3.1)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+[Desktop Runtime 7.0(including DotNet Core Runtime 7.0)](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
 
-快速下载Desktop Runtime 3.1.6：
+快速下载Desktop Runtime 7.0.5：
 
-[X86](https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-desktop-3.1.6-windows-x86-installer)
+[X86](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-7.0.5-windows-x86-installer)
 
-[X64](https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-desktop-3.1.6-windows-x64-installer)
+[X64](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-7.0.5-windows-x64-installer)
